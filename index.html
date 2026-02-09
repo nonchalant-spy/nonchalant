@@ -1,24 +1,47 @@
-<div class="container">
-  <h1>🎀 Happy Birthday Akku 🎀</h1>
-  <p class="subtitle">
-    Born on <b>2 August 2011 (Tuesday)</b> 🌸<br>
-    My sister by heart 💕
-  </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Akku 🎀</title>
 
-  <div class="countdown">
-    ⏳ Countdown to Akku’s Birthday:
-    <div id="timer"></div>
+  <!-- ✅ CSS FILE LINK (STEP 5) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- 🌸 YOUR CONTENT (what you sent) -->
+  <div class="container">
+    <h1>🎀 Happy Birthday Akku 🎀</h1>
+    <p class="subtitle">
+      Born on <b>2 August 2011 (Tuesday)</b> 🌸<br>
+      My sister by heart 💕
+    </p>
+
+    <div class="countdown">
+      ⏳ Countdown to Akku’s Birthday:
+      <div id="timer"></div>
+    </div>
+
+    <button onclick="startSurprise()">Open Your Surprise 🎁</button>
+
+    <div id="message" class="message-box hidden"></div>
+
+    <div class="floating">
+      💗 💕 💖 💞 💓 💝
+    </div>
+
+    <p class="subtitle">Age: <span id="age"></span> years 🌸</p>
+
+    <canvas id="confetti"></canvas>
+
+    <audio id="music"
+      src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
+    </audio>
   </div>
 
-  <button onclick="startSurprise()">Open Your Surprise 🎁</button>
+  <!-- ✅ JAVASCRIPT FILE LINK (STEP 5) -->
+  <script src="script.js"></script>
 
-  <div id="message" class="message-box hidden"></div>
-
-  <div class="floating">
-    💗 💕 💖 💞 💓 💝
-  </div>
-<p class="subtitle">Age: <span id="age"></span> years 🌸</p>
-  <canvas id="confetti"></canvas>
-
-  <audio id="music" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
-</div>
+</body>
+</html>
