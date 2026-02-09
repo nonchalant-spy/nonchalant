@@ -15,10 +15,25 @@ const text = [
 let index = 0;
 
 function startSurprise() {
-  document.getElementById("message").classList.remove("hidden");
-  document.getElementById("music").play();
+  const messageBox = document.getElementById("message");
+
+  // reset if clicked again
+  messageBox.innerHTML = "";
+  index = 0;
+
+  messageBox.classList.remove("hidden");
+
+  // play music safely
+  const music = document.getElementById("music");
+  if (music) music.play().catch(() => {});
+
   typeText();
   confetti();
+
+  // smooth scroll to message box
+  setTimeout(() => {
+    messageBox.scrollIntoView({ behavior: "smooth" });
+  }, 300);
 }
 
 function typeText() {
@@ -42,7 +57,8 @@ function updateCountdown() {
   const diff = birthday - now;
 
   if (diff <= 0) {
-    document.getElementById("timer").innerHTML = "🎉 IT’S AKKU’S BIRTHDAY TODAY 🎉";
+    document.getElementById("timer").innerHTML =
+      "🎉 IT’S AKKU’S BIRTHDAY TODAY 🎉";
     return;
   }
 
@@ -92,6 +108,8 @@ function confetti() {
 
   setInterval(draw, 20);
 }
+
+/* 🎈 Age Calculation */
 function calculateAge() {
   const birthDate = new Date("August 2, 2011");
   const today = new Date();
