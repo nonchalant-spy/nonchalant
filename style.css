@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #ffe6f0, #ffd1dc);
+  font-family: 'Comic Sans MS', cursive;
+  text-align: center;
+  overflow: hidden;
+}
+
+.container {
+  margin-top: 60px;
+  padding: 20px;
+}
+
+h1 {
+  color: #ff4d88;
+  font-size: 3em;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 5px #ff9ebc; }
+  to { text-shadow: 0 0 20px #ff4d88; }
+}
+
+.subtitle {
+  color: #555;
+  font-size: 1.2em;
+  margin-bottom: 25px;
+}
+
+button {
+  background-color: #ff85a2;
+  color: white;
+  border: none;
+  padding: 15px 35px;
+  border-radius: 30px;
+  font-size: 1em;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+button:hover {
+  background-color: #ff4d88;
+}
+
+.message-box {
+  margin: 30px auto;
+  max-width: 500px;
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  font-size: 1.1em;
+  color: #444;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.hidden {
+  display: none;
+}
+
+.floating {
+  position: absolute;
+  bottom: -50px;
+  width: 100%;
+  font-size: 2em;
+  animation: floatUp 6s linear infinite;
+}
+
+@keyframes floatUp {
+  from { transform: translateY(0); }
+  to { transform: translateY(-120vh); }
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
