@@ -1,16 +1,25 @@
+/* 🌸 Global settings */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
+  min-height: 100vh;
   background: linear-gradient(135deg, #ffe6f0, #ffd1dc);
   font-family: 'Comic Sans MS', cursive;
   text-align: center;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
+/* 🌷 Main container */
 .container {
   margin-top: 60px;
   padding: 20px;
 }
 
+/* 🎀 Heading */
 h1 {
   color: #ff4d88;
   font-size: 3em;
@@ -18,62 +27,96 @@ h1 {
 }
 
 @keyframes glow {
-  from { text-shadow: 0 0 5px #ff9ebc; }
-  to { text-shadow: 0 0 20px #ff4d88; }
+  from {
+    text-shadow: 0 0 5px #ff9ebc;
+  }
+  to {
+    text-shadow: 0 0 20px #ff4d88;
+  }
 }
 
+/* 🌸 Subtitles & text */
 .subtitle {
   color: #555;
   font-size: 1.2em;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
+/* ⏳ Countdown */
+.countdown {
+  background: rgba(255, 255, 255, 0.6);
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 1em;
+  margin-bottom: 20px;
+  color: #ff4d88;
+}
+
+/* 🎁 Button */
 button {
   background-color: #ff85a2;
-  color: white;
+  color: #fff;
   border: none;
   padding: 15px 35px;
   border-radius: 30px;
   font-size: 1em;
   cursor: pointer;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 button:hover {
   background-color: #ff4d88;
+  transform: scale(1.05);
 }
 
+/* 💌 Message box */
 .message-box {
   margin: 30px auto;
-  max-width: 500px;
-  background: white;
-  padding: 20px;
+  max-width: 520px;
+  background: #fff;
+  padding: 25px;
   border-radius: 20px;
   font-size: 1.1em;
   color: #444;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  line-height: 1.6;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
+/* Hidden state */
 .hidden {
   display: none;
 }
 
+/* 💕 Floating hearts */
 .floating {
-  position: absolute;
+  position: fixed;
   bottom: -50px;
   width: 100%;
   font-size: 2em;
-  animation: floatUp 6s linear infinite;
+  pointer-events: none;
+  animation: floatUp 7s linear infinite;
 }
 
 @keyframes floatUp {
-  from { transform: translateY(0); }
-  to { transform: translateY(-120vh); }
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-120vh);
+    opacity: 0;
+  }
 }
 
+/* 🎊 Confetti canvas */
 canvas {
   position: fixed;
   top: 0;
   left: 0;
   pointer-events: none;
+  z-index: 10;
 }
+
+/* 📱 Mobile opt*
